@@ -75,9 +75,19 @@ class _RandomTextPageState extends State<RandomTextPage> {
     '¿Realmente somos libres?',
     '¿Un cambio de forma individual puede cambiar una sociedad?',
     'Uno nunca va estar listo para ser papá, pero, ¿Cuáles crees que serian las cualidades necesarias para serlo?',
-    '¿Condicionarías el derecho a tener hijos?',
+    '¿Condicionarías retirar el derecho a tener hijos?',
+    '¿Te gusta lo impredecible?',
+    '¿Le tienes miedo al futuro?',
+    '¿Que podría pasar para quitarnos la cualidad que tenemos para amar?',
+    '¿Que opinas del consumismo?',
+    '¿Nuestra nueva sociedad promueve la individualización extrema?',
+    '¿Crees en el, “hasta que la muerte nos separe?',
+    '¿El humano llegara aun punto de conformismo, en el que ya no quiera trascender?',
+    '¿Como es el amor maduro?',
+    '¿Crees que por miedo al arriesgar el amor, terminamos arriesgando el amor?',
+    ' ¿Es necesario tener un propósito en la vida?',
 
-    // Añade aquí todos los textos que quieras
+    // Aqui se pondran nuevas ideas
   ];
   String textoActual = '';
   final random = Random();
@@ -85,7 +95,7 @@ class _RandomTextPageState extends State<RandomTextPage> {
   @override
   void initState() {
     super.initState();
-    textoActual = textos[0]; // inicializa con el primer texto
+    textoActual = textos[0]; // INICIALIZA con el primer texto
   }
 
   void cambiarTexto() {
