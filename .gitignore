@@ -8,7 +8,10 @@
 .buildlog/
 .history
 .svn/
+binary/
 migrate_working_dir/
+\android\app\release-key.keystore
+.vscode
 
 # IntelliJ related
 *.iml
