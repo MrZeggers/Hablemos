@@ -1,4 +1,4 @@
-package com.example.flutte_hablemos
+package com.hyperflowdynamics.flutte_hablemos
 
 import io.flutter.embedding.android.FlutterActivity
 
