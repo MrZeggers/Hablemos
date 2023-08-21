@@ -5,7 +5,7 @@ import 'mongodb.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await MongoDataBase.connect();
+  await MongoDataBase.initialize();
   runApp(MyApp());
 }
 
@@ -26,7 +26,6 @@ class RandomTextPage extends StatefulWidget {
 
 class _RandomTextPageState extends State<RandomTextPage> {
   List textos = MongoDataBase.fullQuestions;
-  //List textos = ["¿Crees que el amigo es otro yo?"];
   String textoActual = '';
   final random = Random();
 
@@ -49,15 +48,26 @@ class _RandomTextPageState extends State<RandomTextPage> {
       child: Container(
         color: Colors.black,
         child: Center(
-          child: Text(
-            textoActual,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-              decoration: TextDecoration.underline,
-              decorationColor: Colors.black,
-            ),
-            textAlign: TextAlign.center,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image.asset(
+                'asset/icons/hablemos.png',
+                width: 100,
+                height: 100,
+              ),
+              SizedBox(height: 20.0),
+              Text(
+                textoActual,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  decoration: TextDecoration.underline,
+                  decorationColor: Colors.black,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ],
           ),
         ),
       ),
